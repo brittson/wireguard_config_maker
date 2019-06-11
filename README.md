@@ -21,4 +21,6 @@ DNS:: Any Dns of your choice, incase you have pihole or similer running on your 
 
 hope this will make things bit easier
 
+Once you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.
+
 This project is not affiliated in any ways with Jason A. Donenfeld or "WireGuard"
