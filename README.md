@@ -1,4 +1,4 @@
-# wireguard_config_maker
+# Wireguard Config Maker
 Simple Java program to create wireguard client config files.
 
 
