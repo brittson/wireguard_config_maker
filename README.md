@@ -1,4 +1,7 @@
 # Wireguard Config Maker
+
+Screenshot 2019-06-11 at 5.07.04 PM.png
+
 Simple Java program to create wireguard client config files.
 
 You need to install java on your os to use this program. You can use the generated config files with official wireguard clients
