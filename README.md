@@ -1,6 +1,7 @@
 # Wireguard Config Maker
 
-Screenshot 2019-06-11 at 5.07.04 PM.png
+![GitHub](https://github.com/brittson/wireguard_config_maker/blob/master/Screenshot%202019-06-11%20at%205.07.04%20PM.png)
+
 
 Simple Java program to create wireguard client config files.
 
