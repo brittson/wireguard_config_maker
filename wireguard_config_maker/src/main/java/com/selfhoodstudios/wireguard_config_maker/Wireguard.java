@@ -5,8 +5,14 @@
  */
 package com.selfhoodstudios.wireguard_config_maker;
 
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.Base64;
 import org.whispersystems.curve25519.Curve25519;
 import org.whispersystems.curve25519.Curve25519KeyPair;
@@ -224,9 +230,16 @@ public class Wireguard extends javax.swing.JFrame {
             FileWriter f=new FileWriter(fname+".conf");
             f.write(jTextArea2.getText());
             f.close();
+            
+            //qrcode gen
+            String path=fname+"QR.png";
+            QRCodeWriter qrCodeWriter = new QRCodeWriter();
+            BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
+            Path qrpath = FileSystems.getDefault().getPath(path);
+            MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
         
         }
-        catch(IOException ex){}
+        catch(Exception ex){}
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     /**
