@@ -28,4 +28,6 @@ Once you generate the config , write the config name and press enter to save the
 To create multiple configs on one go , just select the check box and write down how many clients you need , all files will be saved on the same directory where .jar file is
 
 This project is not affiliated in any ways with Jason A. Donenfeld or "WireGuard"
-["Selfhood Studios,London"](https://www.selfhood-studios.com)
+
+
+[Selfhood Studios,London](https://www.selfhood-studios.com)
