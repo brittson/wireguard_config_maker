@@ -66,32 +66,30 @@
                                       <Component id="jTextField7" min="-2" pref="224" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane1" max="32767" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField8" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextField8" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="jTextField3" max="32767" attributes="0"/>
+                                              <Component id="jTextField2" alignment="1" pref="222" max="32767" attributes="0"/>
+                                              <Component id="jTextField1" alignment="1" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jTextField3" max="32767" attributes="0"/>
-                                                  <Component id="jTextField2" alignment="1" pref="222" max="32767" attributes="0"/>
-                                                  <Component id="jTextField1" alignment="1" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Component id="jTextField5" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" min="-2" pref="222" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jTextField5" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
+                                          <Component id="jTextField4" min="-2" pref="222" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -341,7 +339,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Instructions::&#xa;&#xa;Single Config.....&#xa;&#xa;Server Endpoint:: Your servers public IP&#xa;Server Port:: Should be the same port mentioned in your wireguard config file&#xa;Server Public Key:: run [cat publickey] in your server inside /etc/wireguard folder&#xa;Client Subnet:: ip for your client, where it should be a subnet of wireguard subnet ip, put /32 after the ip&#xa;DNS:: Any Dns of your choice, incase you have pihole or similer running on your server use that ip&#xa;Once you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.&#xa;&#xa;Multiple Config.....&#xa;&#xa;Client Subnet:: leave the last subnet empty (ex: 10.0.0)&#xa;Subnet Starts:: select the first client subnet (preferably 2 if server subnet ends at 1)&#xa;Jjust select the check box and write down how many clients you need(less than 255, for more change subnet first) , all files will be saved on the same directory where .jar file is&#xa;"/>
+            <Property name="text" type="java.lang.String" value="Instructions::&#xa;&#xa;Single Config.....&#xa;&#xa;Server Endpoint:: Your servers public IP&#xa;Server Port:: Should be the same port mentioned in your wireguard config file&#xa;Server Public Key:: run [cat publickey] in your server inside /etc/wireguard folder&#xa;Client Subnet:: ip for your client, where it should be a subnet of wireguard subnet ip, put /32 after the ip&#xa;DNS:: Any Dns of your choice, incase you have pihole or similer running on your server use that ip&#xa;Once you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.&#xa;&#xa;Multiple Config.....&#xa;&#xa;Client Subnet:: leave the last subnet empty (ex: 10.0.0)&#xa;Subnet Starts:: select the first client subnet (preferably 2 if server subnet ends at 1)&#xa;Just select the check box and write down how many clients you need(less than 255, for more change subnet first) , all files will be saved on the same directory where .jar file is&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

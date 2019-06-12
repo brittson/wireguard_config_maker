@@ -136,7 +136,7 @@ public class Wireguard extends javax.swing.JFrame {
         jLabel9.setText("Subnet Starts:: ");
 
         jTextPane1.setForeground(new java.awt.Color(0, 0, 51));
-        jTextPane1.setText("Instructions::\n\nSingle Config.....\n\nServer Endpoint:: Your servers public IP\nServer Port:: Should be the same port mentioned in your wireguard config file\nServer Public Key:: run [cat publickey] in your server inside /etc/wireguard folder\nClient Subnet:: ip for your client, where it should be a subnet of wireguard subnet ip, put /32 after the ip\nDNS:: Any Dns of your choice, incase you have pihole or similer running on your server use that ip\nOnce you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.\n\nMultiple Config.....\n\nClient Subnet:: leave the last subnet empty (ex: 10.0.0)\nSubnet Starts:: select the first client subnet (preferably 2 if server subnet ends at 1)\nJjust select the check box and write down how many clients you need(less than 255, for more change subnet first) , all files will be saved on the same directory where .jar file is\n");
+        jTextPane1.setText("Instructions::\n\nSingle Config.....\n\nServer Endpoint:: Your servers public IP\nServer Port:: Should be the same port mentioned in your wireguard config file\nServer Public Key:: run [cat publickey] in your server inside /etc/wireguard folder\nClient Subnet:: ip for your client, where it should be a subnet of wireguard subnet ip, put /32 after the ip\nDNS:: Any Dns of your choice, incase you have pihole or similer running on your server use that ip\nOnce you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.\n\nMultiple Config.....\n\nClient Subnet:: leave the last subnet empty (ex: 10.0.0)\nSubnet Starts:: select the first client subnet (preferably 2 if server subnet ends at 1)\nJust select the check box and write down how many clients you need(less than 255, for more change subnet first) , all files will be saved on the same directory where .jar file is\n");
         jScrollPane4.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -296,9 +296,7 @@ public class Wireguard extends javax.swing.JFrame {
                         BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
                         Path qrpath = FileSystems.getDefault().getPath(path);
                         MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
-                        jTextArea2.selectAll();
-                        jTextArea2.replaceSelection("");
-                        jTextArea2.setText("Files Already Saved, Check the folder from where you ran the .jar file....");
+                        
                     
                     }
                 else{
