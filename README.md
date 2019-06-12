@@ -30,7 +30,9 @@ To create multiple configs on one go , just select the check box and write down 
 Multiple Config
 
 Client Subnet:: leave the last subnet empty (ex: 10.0.0)
+
 Subnet Starts:: select the first client subnet (preferably 2 if server subnet ends at 1)
+
 Just select the check box and write down how many clients you need(less than 255, for more change subnet first) , all files will be saved on the same directory where .jar file is
 
 This project is not affiliated in any ways with Jason A. Donenfeld or "WireGuard"
