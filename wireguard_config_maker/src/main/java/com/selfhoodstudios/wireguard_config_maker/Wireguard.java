@@ -61,6 +61,10 @@ public class Wireguard extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jProgressBar1 = new javax.swing.JProgressBar();
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
@@ -118,6 +122,13 @@ public class Wireguard extends javax.swing.JFrame {
 
         jCheckBox1.setText("Exclude Private IPs");
 
+        jCheckBox2.setText("Multiple Config");
+
+        jLabel8.setText("No of Clients:: ");
+
+        jProgressBar1.setBackground(new java.awt.Color(0, 51, 51));
+        jProgressBar1.setForeground(new java.awt.Color(153, 255, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,11 +136,10 @@ public class Wireguard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jCheckBox1)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,32 +156,41 @@ public class Wireguard extends javax.swing.JFrame {
                                                 .addComponent(jTextField1))
                                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel4))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jCheckBox2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane1)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(58, 58, 58)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -188,16 +207,23 @@ public class Wireguard extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
-                        .addGap(8, 8, 8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCheckBox2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                         .addComponent(jLabel4)
-                        .addGap(7, 7, 7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -205,22 +231,88 @@ public class Wireguard extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        try{
-            jTextArea1.selectAll();
-            jTextArea1.replaceSelection("");
-            jTextArea2.selectAll();
-            jTextArea2.replaceSelection("");
-            Curve25519KeyPair keyPair = Curve25519.getInstance(Curve25519.JAVA).generateKeyPair();
-            String pub=Base64.getEncoder().encodeToString(keyPair.getPublicKey());
-            String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
-            jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText());
-            if(jCheckBox1.isSelected()!=true){
-                jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+           if(jCheckBox2.isSelected()==false){
+                jTextArea1.selectAll();
+                jTextArea1.replaceSelection("");
+                jTextArea2.selectAll();
+                jTextArea2.replaceSelection("");
+                Curve25519KeyPair keyPair = Curve25519.getInstance(Curve25519.JAVA).generateKeyPair();
+                String pub=Base64.getEncoder().encodeToString(keyPair.getPublicKey());
+                String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
+                jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText());
+                if(jCheckBox1.isSelected()!=true){
+                    jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                }
+                else{
+                    jTextArea2.append("[Interface]\nPrivateKey= "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIPs= 0.0.0.0/5, 8.0.0.0/7, 11.0.0.0/8, 12.0.0.0/6, 16.0.0.0/4, 32.0.0.0/3, 64.0.0.0/2, 128.0.0.0/3, 160.0.0.0/5, 168.0.0.0/6, 172.0.0.0/12, 172.32.0.0/11, 172.64.0.0/10, 172.128.0.0/9, 173.0.0.0/8, 174.0.0.0/7, 176.0.0.0/4, 192.0.0.0/9, 192.128.0.0/11, 192.160.0.0/13, 192.169.0.0/16, 192.170.0.0/15, 192.172.0.0/14, 192.176.0.0/12, 192.192.0.0/10, 193.0.0.0/8, 194.0.0.0/7, 196.0.0.0/6, 200.0.0.0/5, 208.0.0.0/4, 10.0.0.1/32\nEndpoint="+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                }
             }
-            else{
-                jTextArea2.append("[Interface]\nPrivateKey= "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIPs= 0.0.0.0/5, 8.0.0.0/7, 11.0.0.0/8, 12.0.0.0/6, 16.0.0.0/4, 32.0.0.0/3, 64.0.0.0/2, 128.0.0.0/3, 160.0.0.0/5, 168.0.0.0/6, 172.0.0.0/12, 172.32.0.0/11, 172.64.0.0/10, 172.128.0.0/9, 173.0.0.0/8, 174.0.0.0/7, 176.0.0.0/4, 192.0.0.0/9, 192.128.0.0/11, 192.160.0.0/13, 192.169.0.0/16, 192.170.0.0/15, 192.172.0.0/14, 192.176.0.0/12, 192.192.0.0/10, 193.0.0.0/8, 194.0.0.0/7, 196.0.0.0/6, 200.0.0.0/5, 208.0.0.0/4, 10.0.0.1/32\nEndpoint="+jTextField1.getText()+":"+jTextField2.getText()+"\n");
-            }
-            }
-       catch(NoSuchProviderException ex){}
+           else{
+               jTextArea1.selectAll();
+               jTextArea1.replaceSelection("");
+               jTextArea2.selectAll();
+               jTextArea2.replaceSelection("");
+               int configNum=Integer.parseInt(jTextField7.getText());
+               jProgressBar1.setValue(0);
+               jProgressBar1.setMaximum(configNum);
+               for(int i=1;i<=configNum;i++){
+                    Curve25519KeyPair keyPair = Curve25519.getInstance(Curve25519.JAVA).generateKeyPair();
+                    String pub=Base64.getEncoder().encodeToString(keyPair.getPublicKey());
+                    String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
+                    jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText()+"\n");
+                    if(jCheckBox1.isSelected()!=true){
+                        jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                        FileWriter f=new FileWriter("client"+i+".conf");
+                        f.write(jTextArea2.getText());
+                        f.close();
+
+                        //qrcode gen
+                        String path="client"+i+"QR.png";
+                        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+                        BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
+                        Path qrpath = FileSystems.getDefault().getPath(path);
+                        MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
+                        jTextArea2.selectAll();
+                        jTextArea2.replaceSelection("");
+                        jTextArea2.setText("Files Already Saved, Check the folder from where you ran the .jar file....");
+                    
+                    }
+                else{
+                        jTextArea2.append("[Interface]\nPrivateKey= "+pri+"\nAddress= "+jTextField4.getText()+"\nDNS= "+jTextField5.getText()+"\n\n[Peer]\nPublicKey= "+jTextField3.getText()+"\nAllowedIPs= 0.0.0.0/5, 8.0.0.0/7, 11.0.0.0/8, 12.0.0.0/6, 16.0.0.0/4, 32.0.0.0/3, 64.0.0.0/2, 128.0.0.0/3, 160.0.0.0/5, 168.0.0.0/6, 172.0.0.0/12, 172.32.0.0/11, 172.64.0.0/10, 172.128.0.0/9, 173.0.0.0/8, 174.0.0.0/7, 176.0.0.0/4, 192.0.0.0/9, 192.128.0.0/11, 192.160.0.0/13, 192.169.0.0/16, 192.170.0.0/15, 192.172.0.0/14, 192.176.0.0/12, 192.192.0.0/10, 193.0.0.0/8, 194.0.0.0/7, 196.0.0.0/6, 200.0.0.0/5, 208.0.0.0/4, 10.0.0.1/32\nEndpoint="+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                        FileWriter f=new FileWriter("client"+i+".conf");
+                        f.write(jTextArea2.getText());
+                        f.close();
+
+                        //qrcode gen
+                        String path="client"+i+"QR.png";
+                        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+                        BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
+                        Path qrpath = FileSystems.getDefault().getPath(path);
+                        MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
+                        jTextArea2.selectAll();
+                        jTextArea2.replaceSelection("");
+                        jTextArea2.setText("Files Already Saved, Check the folder from where you ran the .jar file....");
+                    
+                    }
+                    jProgressBar1.setValue(i);
+                    
+                   
+                   
+               }
+                        FileWriter f=new FileWriter("server.conf");
+                        f.write(jTextArea1.getText());
+                        f.close();
+                        jTextArea1.selectAll();
+                        jTextArea1.replaceSelection("");
+                        jTextArea1.setText("Append the contents of server.conf file to wireguard interface file on your server...");
+                        
+               
+               
+               
+           }
+       }
+       
+       catch(Exception ex){}
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -280,6 +372,7 @@ public class Wireguard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -287,6 +380,8 @@ public class Wireguard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -299,5 +394,6 @@ public class Wireguard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
