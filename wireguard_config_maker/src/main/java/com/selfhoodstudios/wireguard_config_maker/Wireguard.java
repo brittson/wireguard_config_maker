@@ -321,7 +321,7 @@ public class Wireguard extends javax.swing.JFrame {
                    
                    
                }
-                        FileWriter f=new FileWriter("server.conf");
+                        FileWriter f=new FileWriter("server.txt");
                         f.write(jTextArea1.getText());
                         f.close();
                         jTextArea1.selectAll();
