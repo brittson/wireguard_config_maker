@@ -289,9 +289,7 @@ public class Wireguard extends javax.swing.JFrame {
                         BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
                         Path qrpath = FileSystems.getDefault().getPath(path);
                         MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
-                        jTextArea2.selectAll();
-                        jTextArea2.replaceSelection("");
-                        jTextArea2.setText("Files Already Saved, Check the folder from where you ran the .jar file....");
+                        
                     
                     }
                     jProgressBar1.setValue(i);
@@ -305,7 +303,9 @@ public class Wireguard extends javax.swing.JFrame {
                         jTextArea1.selectAll();
                         jTextArea1.replaceSelection("");
                         jTextArea1.setText("Append the contents of server.conf file to wireguard interface file on your server...");
-                        
+                        jTextArea2.selectAll();
+                        jTextArea2.replaceSelection("");
+                        jTextArea2.setText("Files Already Saved, Check the folder from where you ran the .jar file....");
                
                
                
