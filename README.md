@@ -1,5 +1,7 @@
 # Wireguard Config Maker
 
+I made this in Java because of portability between different OSs, anyone is free to build similar stuff using different platform.
+
 ![GitHub](https://github.com/brittson/wireguard_config_maker/blob/master/Screenshot%202019-06-11%20at%205.07.04%20PM.png)
 
 
@@ -20,5 +22,7 @@ Client Subnet:: ip for your client, where it should be a subnet of wireguard sub
 DNS:: Any Dns of your choice, incase you have pihole or similer running on your server use that ip
 
 hope this will make things bit easier
+
+Once you generate the config , write the config name and press enter to save the config file and corresponding QR code to the application folder.
 
 This project is not affiliated in any ways with Jason A. Donenfeld or "WireGuard"
