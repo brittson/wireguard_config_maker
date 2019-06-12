@@ -296,7 +296,8 @@ public class Wireguard extends javax.swing.JFrame {
                         BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
                         Path qrpath = FileSystems.getDefault().getPath(path);
                         MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
-                        
+                        jTextArea2.selectAll();
+                        jTextArea2.replaceSelection("");
                     
                     }
                 else{
@@ -311,7 +312,8 @@ public class Wireguard extends javax.swing.JFrame {
                         BitMatrix bitMatrix = qrCodeWriter.encode(jTextArea2.getText(), BarcodeFormat.QR_CODE, 500, 500);
                         Path qrpath = FileSystems.getDefault().getPath(path);
                         MatrixToImageWriter.writeToPath(bitMatrix, "PNG", qrpath);
-                        
+                        jTextArea2.selectAll();
+                        jTextArea2.replaceSelection("");
                     
                     }
                     jProgressBar1.setValue(i);
