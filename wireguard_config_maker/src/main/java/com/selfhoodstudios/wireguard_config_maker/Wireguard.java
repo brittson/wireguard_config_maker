@@ -265,7 +265,7 @@ public class Wireguard extends javax.swing.JFrame {
                 String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
                 jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText());
                 if(jCheckBox1.isSelected()!=true){
-                    jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps =0.0.0.0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                    jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps =0.0.0.0/0,::0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
                 }
                 else{
                     jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIPs = 0.0.0.0/5, 8.0.0.0/7, 11.0.0.0/8, 12.0.0.0/6, 16.0.0.0/4, 32.0.0.0/3, 64.0.0.0/2, 128.0.0.0/3, 160.0.0.0/5, 168.0.0.0/6, 172.0.0.0/12, 172.32.0.0/11, 172.64.0.0/10, 172.128.0.0/9, 173.0.0.0/8, 174.0.0.0/7, 176.0.0.0/4, 192.0.0.0/9, 192.128.0.0/11, 192.160.0.0/13, 192.169.0.0/16, 192.170.0.0/15, 192.172.0.0/14, 192.176.0.0/12, 192.192.0.0/10, 193.0.0.0/8, 194.0.0.0/7, 196.0.0.0/6, 200.0.0.0/5, 208.0.0.0/4, 10.0.0.1/32\nEndpoint="+jTextField1.getText()+":"+jTextField2.getText()+"\n");
@@ -286,7 +286,7 @@ public class Wireguard extends javax.swing.JFrame {
                     String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
                     jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\n");
                     if(jCheckBox1.isSelected()!=true){
-                        jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                        jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0,::0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
                         FileWriter f=new FileWriter("client"+i+".conf");
                         f.write(jTextArea2.getText());
                         f.close();
