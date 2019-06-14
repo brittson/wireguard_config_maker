@@ -1,6 +1,6 @@
 # Wireguard Config Maker
 
-I made this in Java because of portability between different OSs, anyone is free to build similar stuff using different platform.
+I made this in Java because of portability between different OSs, anyone is free to build similar stuff using different platform. Currently supports only ipv4 addresses.
 
 ![GitHub](https://github.com/brittson/wireguard_config_maker/blob/master/Screenshot%202019-06-11%20at%205.07.04%20PM.png)
 
