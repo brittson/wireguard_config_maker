@@ -286,7 +286,7 @@ public class Wireguard extends javax.swing.JFrame {
                     String pri=Base64.getEncoder().encodeToString(keyPair.getPrivateKey());
                     jTextArea1.append("[Peer]\n"+"PublicKey = "+pub+"\nAllowedIps = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\n");
                     if(jCheckBox1.isSelected()!=true){
-                        jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps=0.0.0.0/0,::0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
+                        jTextArea2.append("[Interface]\nPrivateKey = "+pri+"\nAddress = "+jTextField4.getText()+"."+(subnetStarts+i)+"/32"+"\nDNS = "+jTextField5.getText()+"\n\n[Peer]\nPublicKey = "+jTextField3.getText()+"\nAllowedIps = 0.0.0.0/0,::0/0\nEndpoint= "+jTextField1.getText()+":"+jTextField2.getText()+"\n");
                         FileWriter f=new FileWriter("client"+i+".conf");
                         f.write(jTextArea2.getText());
                         f.close();
