@@ -50,4 +50,4 @@ Just select the check box and write down how many clients you need(less than 255
 This project is not affiliated in any ways with [Jason A. Donenfeld](https://gitzx2c4.com/) or the [WireGuard project](https://www.wireguard.com/).
 
 
-[Selfhood Studios, London](https://www.selfhood-studios.com)
+[Selfhood Studios, London](https://www.selfhood-studios.com) [Get TLDR](https://www.get-tldr.com) 
